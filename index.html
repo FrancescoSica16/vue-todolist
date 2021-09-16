@@ -26,7 +26,7 @@
                 <ul>
                     <li class="mb-2" v-for="(element, index) in toDoList">{{element}}
                            
-                        <i class="far fa-trash-alt float-end ms-5 align-text-bottom"></i>
+                        <i class="far fa-trash-alt float-end ms-5 align-text-bottom" @click="deleteItem(index)"></i>
                     
                     </li>
                 </ul>

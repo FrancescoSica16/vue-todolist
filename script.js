@@ -5,5 +5,12 @@ var app = new Vue({
         toDoList: [
             "patate","cipolle","tonno","pasta","formaggio grana","piselli"
         ],
-    }
+    },
+
+    methods:{
+        deleteItem : function (index) {
+            this.toDoList.splice(index, 1);
+            console.log(this.toDoList)
+        },
+    },
 }) 
