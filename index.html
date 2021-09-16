@@ -19,23 +19,34 @@
 </head>
 <body>
 <div id="app">
-    <div class="container">
+<div class="container">
+    <div class="list-wrapper">
+        <div class="row mt-5">
+            <div class="">
+                <input type="text" placeholder="Inserisci un nuovo elemento">
+            </div>
+        </div>
         <div class="row">
-           <div class="list-wrapper d-flex mt-5 col-8 justify-content-center ">
+            <div class="col-8">
+            
+                <div class="d-flex mt-5 justify-content-center ">
+                
+                    <ul>
+                        <li class="mb-2" v-for="(element, index) in toDoList">{{element}}
+                            
+                            <i class="far fa-trash-alt float-end ms-5 align-text-bottom" 
+                            @click="deleteItem(index)"></i>
+                        
+                        </li>
+                    </ul>
 
-                <ul>
-                    <li class="mb-2" v-for="(element, index) in toDoList">{{element}}
-                           
-                        <i class="far fa-trash-alt float-end ms-5 align-text-bottom" @click="deleteItem(index)"></i>
-                    
-                    </li>
-                </ul>
+                </div>
 
             </div>
-
         </div>
-
     </div>
+
+</div>
    
 </div>
     
