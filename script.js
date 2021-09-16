@@ -3,7 +3,29 @@ var app = new Vue({
 
     data: {
         toDoList: [
-            "patate","cipolle","tonno","pasta","formaggio grana","piselli"
+            {
+                nome: "provola",
+                completed: false,
+            },
+            {
+                nome: "acdaasd",
+                completed: false,
+            },
+            {
+                nome: "trie",
+                completed: false,
+            },
+            {
+                nome: "casa",
+                completed: false,
+            },
+            {
+                nome: "cosos",
+                completed: false,
+            },
+            
+
+            // "patate","cipolle","tonno","pasta","formaggio grana","piselli"
         ],
         field : "",
     },
@@ -17,8 +39,11 @@ var app = new Vue({
             if (this.field.trim("").length > 0) {
                 this.toDoList.push(this.field);
                 this.field = "";  
-            }
-            
+            }            
+        },
+        itemComplete : function (index) {
+            this.toDoList[index].completed = true;
+            console.log(this.toDoList[index].completed)
         }
     },
 
