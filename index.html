@@ -18,9 +18,25 @@
     <title>Javascript VUE To Do List</title>
 </head>
 <body>
-<div class="app">
+<div id="app">
+    <div class="container">
+        <div class="row">
+           <div class="list-wrapper d-flex mt-5 col-8 justify-content-center ">
 
-    
+                <ul>
+                    <li class="mb-2" v-for="(element, index) in toDoList">{{element}}
+                           
+                        <i class="far fa-trash-alt float-end ms-5 align-text-bottom"></i>
+                    
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+   
 </div>
     
 
