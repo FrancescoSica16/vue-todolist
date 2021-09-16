@@ -5,6 +5,7 @@ var app = new Vue({
         toDoList: [
             "patate","cipolle","tonno","pasta","formaggio grana","piselli"
         ],
+        field : "",
     },
 
     methods:{
@@ -12,5 +13,14 @@ var app = new Vue({
             this.toDoList.splice(index, 1);
             console.log(this.toDoList)
         },
+        addItem : function () {
+            if (this.field.trim("").length > 0) {
+                this.toDoList.push(this.field);
+                this.field = "";  
+            }
+            
+        }
     },
+
+
 }) 

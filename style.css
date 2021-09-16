@@ -17,4 +17,6 @@ ul li{
 
 .list-wrapper{
     background-color: navajowhite;
+    min-height: 300px;
+    border-radius: 25px;
 }
